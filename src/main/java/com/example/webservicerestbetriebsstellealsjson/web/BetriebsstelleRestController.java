@@ -12,7 +12,6 @@ import java.util.Map;
 public class BetriebsstelleRestController {
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    @ResponseBody
     public ArrayList<Map> betriebsstellenList() throws Exception {
         return   ReadCSV.readAll("src/main/resources/DBNetz-Betriebsstellenverzeichnis-Stand2018-04.csv");
     }
